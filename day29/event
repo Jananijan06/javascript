@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>task1:</h1>
+    <button id="btn1" onclick="displayText()">Click me</button>
+    
+    <h1>task2:</h1>
+    <p id="msg1">This is my paragraph text.</p>
+    <button onclick="changeColor()">Click me</button>
+    
+    <h1>task3:</h1>
+    <div id="box1" onmouseover="mover()" style="background-color: peru;  width:120px;  height:20px;  padding:40px;">Mouse Over Me</div>
+    
+    <h1>task4:</h1>
+    <button ondblclick="displayAlert()">Double Click Me</button>
+    
+    <h1>task5:</h1>
+    <input type="text" onkeydown="displayKey(event)" placeholder="Press any Key">
+    <p id="result"></p>
+
+    <script>
+        // task1
+        function displayText()
+        {
+             document.getElementById("btn1").innerHTML = "welcome to javascript";
+        }
+        //  task2
+        function changeColor()
+        {
+            document.getElementById("msg1").style.color = "pink";
+        }
+        //task3
+        function mover()
+        {
+            document.getElementById("box1").style.backgroundColor = "yellow";
+        }
+        //task4
+        function displayAlert()
+        {
+            alert("Button was double clicked!");
+        }
+        //task5
+        function displayKey(event)
+        {
+            document.getElementById("result").innerHTML = "Key Pressed: " + event.key;
+        }
+
+    </script>
+</body>
+</html>
